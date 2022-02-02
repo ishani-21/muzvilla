@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\LoginController;
 // use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\API\UserDetailsController;
+// use App\Http\Controllers\API\UserDetailsController;
 use App\Http\Controllers\API\LikeController;
 use App\Http\Controllers\API\PremiumController;
 use App\Http\Controllers\API\SettingController;
@@ -47,17 +47,17 @@ Route::group(['middleware' => 'AuthenticateApi'], function () {
 
 Route::group(['middleware' => 'auth:api'], function () {
     // -------------------------- User Detail -------------------------
-    Route::post('insertuserdetail', [UserDetailsController::class, 'store']);
-    Route::get('showuserdetail/{id?}', [UserDetailsController::class, 'show']);
-    Route::put('updateuserdetail/{id}', [UserDetailsController::class, 'update']);
-    Route::delete('deleteuserdetail/{id}', [UserDetailsController::class, 'destroy']);
+    // Route::post('insertuserdetail', [UserDetailsController::class, 'store']);
+    // Route::get('showuserdetail/{id?}', [UserDetailsController::class, 'show']);
+    // Route::put('updateuserdetail/{id}', [UserDetailsController::class, 'update']);
+    // Route::delete('deleteuserdetail/{id}', [UserDetailsController::class, 'destroy']);
 
     // -------------------------------------- Like ----------------------------
     Route::post('likeinsert', [LikeController::class, 'like']);
     Route::get('shownotification', [LikeController::class, 'showNotification']);
 
     // -------------------------------------- Distance ----------------------------
-    Route::post('userdistance', [UserDetailsController::class, 'distance']);
+    // Route::post('userdistance', [UserDetailsController::class, 'distance']);
 
     // -------------------------------------- Premium ----------------------------
     Route::post('insertpremium', [PremiumController::class, 'store']);
