@@ -27,7 +27,6 @@ class PremiumController extends Controller
      */
     public function index(PremiumDatatable $PremiumDatatable)
     {
-        dd(1);
         return $PremiumDatatable->render('admin.dashboard.listpackage');
     }
 
