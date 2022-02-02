@@ -30,11 +30,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(UsersDatatable $dataTable)
+    public function index(UsersDatatable $UsersDatatable)
     {
-        dd(1);
-        // $user = User::all();
-        return $dataTable->render('admin.dashboard.userlist');
+        return $UsersDatatable->render('admin.dashboard.userlist');
     }
 
     /**
