@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\DataTables\PremiumDataTable;
+use App\DataTables\PremiumDatatable;
 use App\Contracts\PremiumContract;
 use App\Repositories\PremiumRepository;
 use App\Http\Requests\Admin\PackageRequest;
@@ -27,6 +27,7 @@ class PremiumController extends Controller
      */
     public function index(PremiumDatatable $PremiumDatatable)
     {
+        dd(1);
         return $PremiumDatatable->render('admin.dashboard.listpackage');
     }
 
