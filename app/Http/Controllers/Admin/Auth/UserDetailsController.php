@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\UserDetail;
-use App\DataTables\UserDetailDataTable;
+use App\DataTables\UserDetailDatatable;
 
 use App\Contracts\UserDetailContract;
 use App\Repositories\UserDetailRepository;
@@ -24,10 +24,10 @@ class UserDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(UserDetailDataTable $UserDetailDataTable)
+    public function index(UserDetailDatatable $UserDetailDatatable)
     {
         dd(1);
-        return $UserDetailDataTable->render('admin.dashboard.userdetail');
+        return $UserDetailDatatable->render('admin.dashboard.userdetail');
     }
 
     /**
