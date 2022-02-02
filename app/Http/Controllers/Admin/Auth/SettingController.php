@@ -45,6 +45,7 @@ class SettingController extends Controller
      */
     public function store(SettingRequest $request)
     {
+        dd(1);
         $set = $this->Setting->store($request->all());
         return redirect()->route('admin.setting.index',compact('set'));
     }

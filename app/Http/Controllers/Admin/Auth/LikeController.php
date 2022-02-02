@@ -16,6 +16,7 @@ class LikeController extends Controller
 
     public function notification(NotificationDatatable $NotificationDatatable)
     {
+        dd(1);
         return $NotificationDatatable->render('admin.dashboard.notification');
     }
 
