@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use App\DataTables\UsersDataTable;
+use App\DataTables\UsersDatatable;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\UserRequest;
 use Illuminate\Support\Facades\Hash;
@@ -30,8 +30,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(UsersDataTable $dataTable)
+    public function index(UsersDatatable $dataTable)
     {
+        dd(1);
         // $user = User::all();
         return $dataTable->render('admin.dashboard.userlist');
     }
