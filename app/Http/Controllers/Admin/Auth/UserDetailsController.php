@@ -26,7 +26,6 @@ class UserDetailsController extends Controller
      */
     public function index(UserDetailDatatable $UserDetailDatatable)
     {
-        dd(1);
         return $UserDetailDatatable->render('admin.dashboard.userdetail');
     }
 
